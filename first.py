@@ -1,6 +1,7 @@
 print("1")
 print(6)
 print("tamar")
+print("new3")
 print(3)
 print(4)
 print(5)
