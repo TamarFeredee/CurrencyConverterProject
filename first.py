@@ -1,4 +1,5 @@
 print("1")
+print(6)
 print("tamar")
 print(3)
 print(4)
