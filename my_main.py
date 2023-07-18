@@ -4,21 +4,28 @@ from coins import USD, ILS
 # Program will convert currency between USD (United States Dollars) and ILS (Israeli Shekel)
 
 global final_result
+global value_to_convert
 my_list = []
 global file
 
 
 # Second screen (Choice Screen)
 def get_user_value():
-    global final_result
+    global final_result, value_to_convert
     user_choice = input('Please choose an option (1/2): \n1.Dollars to Shekels \n2.Shekels to Dollars \n')
     if user_choice == '1':
-        value_to_convert = float(input('Please enter an amount to convert \n'))
+        try:
+            value_to_convert = float(input('Please enter an amount to convert \n'))
+        except ValueError:
+            print("Please enter number")
         usd = USD()
         final_result = usd.calculate(value_to_convert)
         print("Results is: ", value_to_convert, "Dollars = ", final_result, "Shekels")
     elif user_choice == '2':
-        value_to_convert = float(input('Please enter an amount to convert \n'))
+        try:
+            value_to_convert = float(input('Please enter an amount to convert \n'))
+        except ValueError:
+            print("Please enter number")
         ils = ILS()
         final_result = ils.calculate(value_to_convert)
         print("Results is: ", value_to_convert, "Shekels = ", final_result, "Dollars")

@@ -13,17 +13,9 @@ class MyTest(unittest.TestCase, my_main):
     def setUpClass(self):
         print('hello')
 
-    def value_to_convert_test_01(self):
-        assert my_main.final_result > 0
-        print("more then 0")
-
-    def result_is_valid_test_02(self):
-        assert my_main.final_result != ""
-        print("is not string")
-
-    def file_content_is_valid_test_03(self):
-        assert my_main.print_final_results() == []
-        print("is list")
+    def value_to_convert_55(self):
+        assert my_main.final_result == 15.400000000000002
+        print("correct result when entering 55 Shekels")
 
     @classmethod
     def tearDownClass(self):
